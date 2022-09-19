@@ -20,14 +20,19 @@ namespace Text06
 
         private void button1_Click(object sender, EventArgs e)
         {
-            File.Create("Jmena.txt");
-            StreamWriter streamWriter1 = File.AppendText("Jmena.txt");
+            StreamWriter streamWriter = new StreamWriter("Jmeno.txt",true);
             string jmeno = textBox1.Text;
             string prijmeni = textBox2.Text;
-            streamWriter1.WriteLine(jmeno, prijmeni.PadLeft(21));
+            streamWriter.WriteLine(jmeno + prijmeni.PadLeft(21));
+            streamWriter.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }
